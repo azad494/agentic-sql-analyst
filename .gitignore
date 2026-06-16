@@ -1,0 +1,62 @@
+# ==========================================
+# 1. SECURITY & ENV VAULTS (CRITICAL)
+# ==========================================
+# Never commit credentials, private tokens, or secret infrastructure keys
+.env
+.env.*
+*.env
+secrets.json
+
+# ==========================================
+# 2. LOCAL DATABASES & BINARY STORAGE
+# ==========================================
+# Prevent heavy relational engines or sandbox database states from syncing
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite
+
+# ==========================================
+# 3. PYTHON VIRTUAL ENVIRONMENTS
+# ==========================================
+# Exclude entire sandbox environment folders to prevent repo bloat
+venv/
+.venv/
+env/
+ENV/
+Chore/
+
+# ==========================================
+# 4. PYTHON COMPILATION CACHES & OOPS LOGS
+# ==========================================
+# Ignore background translation directories and dynamic performance tracing
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# ==========================================
+# 5. IDE CONFIGURATIONS (DEVELOPER SPECIFIC)
+# ==========================================
+# Keep individual layout settings local to your screen setup
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ==========================================
+# 6. OPERATING SYSTEM TRASH (CLEANUP)
+# ==========================================
+# Block background hidden metadata indexing logs from Mac and Windows
+DS_Store
+.DS_Store
+Thumbs.db
+ehthumbs.db
